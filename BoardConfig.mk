@@ -16,6 +16,9 @@
 
 LOCAL_PATH := device/leeco/s2
 
+# Battery Real Info
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
 # Headers
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
@@ -92,7 +95,6 @@ TARGET_POWERHAL_SET_INTERACTIVE_EXT := device/leeco/s2/power/power_ext.c
 
 # RIL
 BOARD_PROVIDES_LIBRIL := true
-TARGET_RIL_VARIANT := caf
 
 # Adreno
 HAVE_ADRENO_SOURCE:= false
@@ -186,17 +188,6 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 TARGET_USES_WCNSS_MAC_ADDR_REV := true
 
-# Cyanogen hardware
-BOARD_HARDWARE_CLASS += device/leeco/s2/cmhw
-
-# Enable dexpreopt to speed boot time
-ifeq ($(HOST_OS),linux)
-  ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
-  endif
-endif
 
 # Twrp
 #RECOVERY_VARIANT := twrp
