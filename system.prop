@@ -2,7 +2,7 @@
 ro.opa.eligible_device=true
 
 # Disable MusicFX - PRODUCT_PROPERTY_OVERRIDES
-ro.musicfx.disabled=true
+#ro.musicfx.disabled=true
 
 #
 # system.prop for msm8952

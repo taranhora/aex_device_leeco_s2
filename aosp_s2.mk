@@ -28,3 +28,6 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += ro.product.model
 
 # Release name
 PRODUCT_RELEASE_NAME := s2
+
+# Use Magisk
+DEFAULT_ROOT_METHOD := magisk
