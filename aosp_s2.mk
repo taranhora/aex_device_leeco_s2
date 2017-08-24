@@ -2,6 +2,9 @@
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
 
+#Boot Animation for AEX 1080p
+TARGET_BOOT_ANIMATION_RES := 1080
+
 # Inherit device configuration
 $(call inherit-product, device/leeco/s2/full_s2.mk)
 
